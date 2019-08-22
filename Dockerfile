@@ -2,6 +2,7 @@ FROM alpine:3.10
 MAINTAINER Fluke667 <Fluke667@gmail.com>  
 ARG TZ='Europe/Berlin'
 ENV TZ ${TZ}
+ENV PORT 8080
 #ENV LANG=C.UTF-8
 
 
