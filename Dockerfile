@@ -46,9 +46,6 @@ EXPOSE 8060/tcp
 EXPOSE 8070/tcp
 EXPOSE 8080/tcp
 EXPOSE 8090/tcp
+EXPOSE 80/tcp
 
-VOLUME ["/data/pproxy"]
-
-COPY pproxy.sh /
-RUN chmod +x /pproxy.sh
 CMD ["pproxy", "-l", "http+socks5://0.0.0.0:80"]
