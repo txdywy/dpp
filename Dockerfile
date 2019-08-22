@@ -48,4 +48,4 @@ EXPOSE 8080/tcp
 EXPOSE 8090/tcp
 EXPOSE 80/tcp
 
-CMD ["pproxy", "-l", "http+socks5://0.0.0.0:${PORT}"]
+CMD ["pproxy", "-l", "http+socks5://0.0.0.0:$PORT"]
