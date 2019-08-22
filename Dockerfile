@@ -2,7 +2,6 @@ FROM alpine:3.10
 MAINTAINER Fluke667 <Fluke667@gmail.com>  
 ARG TZ='Europe/Berlin'
 ENV TZ ${TZ}
-ENV PORT 8080
 #ENV LANG=C.UTF-8
 
 
@@ -49,4 +48,4 @@ EXPOSE 8080/tcp
 EXPOSE 8090/tcp
 EXPOSE 80/tcp
 
-CMD ["pproxy", "-l", "http+socks5://0.0.0.0:$PORT"]
+CMD exec pproxy -l http+socks5://0.0.0.0:$PORT
